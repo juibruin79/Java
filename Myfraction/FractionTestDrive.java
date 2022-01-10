@@ -7,6 +7,8 @@ class FractionTestDrive{
 		System.out.println(answer.toString());
 		System.out.println(f1.compare(new MyFraction(2,6)));
 		System.out.println(f1.compare(new MyFraction(2,4)));
+		f1.reciprocal();
+		System.out.println(f1.toString());
 
 
 	}

@@ -4,8 +4,8 @@ public interface Fraction{
 	public MyFraction getter();
 	public MyFraction add(MyFraction f);
 	// public minus(MyFraction f1, MyFraction f2);
-	// public multipy(MyFraction f1, MyFraction f2);
+	public MyFraction multiply(MyFraction f1);
 	// public divide(MyFraction f1, MyFraction f2);
-	// public reciprocal();
+	public void reciprocal();
 	public boolean compare(MyFraction f);
 }

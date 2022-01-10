@@ -29,6 +29,34 @@ class MyFraction implements Fraction{
 		return new MyFraction(this.nom, this.denom);
 	}
 
+	public MyFraction add(MyFraction f){
+
+		if(f.denom == this.denom){
+			return new MyFraction(f.nom + this.nom, f.denom);
+		}
+
+		int n_denom = f.denom * this.denom;
+		int n_nom = f.nom * this.denom + this.nom * f.denom;
+		MyFraction result = simplifyFactor(n_nom, n_denom);
+
+		return result;
+
+	}
+
+	private MyFraction simplifyFactor(int nom ,int denom){
+		int gcd = 1;
+		for(int i = 1; i <= nom && i <= denom; i++){
+			if(nom%i == 0 && denom % i == 0){
+				gcd = i;
+			}
+		}
+
+		nom = nom / gcd;
+		denom = denom / gcd;
+
+		return new MyFraction(nom, denom);
+	}
+
 	public String toString(){
 		String s_nom = Integer.toString(nom);
 		String s_denom = Integer.toString(denom);

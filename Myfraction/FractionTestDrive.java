@@ -5,7 +5,9 @@ class FractionTestDrive{
 		MyFraction f1 = new MyFraction(1,3);
 		answer = f1.add(new MyFraction(1,6));
 		System.out.println(answer.toString());
-		//MyFraction f2 = new MyFraction(1,0);
+		System.out.println(f1.compare(new MyFraction(2,6)));
+		System.out.println(f1.compare(new MyFraction(2,4)));
+
 
 	}
 }

@@ -43,6 +43,14 @@ class MyFraction implements Fraction{
 
 	}
 
+	public boolean compare(MyFraction f){
+		MyFraction self = simplifyFactor(this.nom, this.denom);
+		MyFraction other = simplifyFactor(f.nom, f.denom);
+		if(self.nom == other.nom && self.denom == other.denom)
+			return true;
+		return false;
+	}
+
 	private MyFraction simplifyFactor(int nom ,int denom){
 		int gcd = 1;
 		for(int i = 1; i <= nom && i <= denom; i++){

@@ -7,5 +7,5 @@ public interface Fraction{
 	// public multipy(MyFraction f1, MyFraction f2);
 	// public divide(MyFraction f1, MyFraction f2);
 	// public reciprocal();
-	// public compare(MyFraction f);
+	public boolean compare(MyFraction f);
 }

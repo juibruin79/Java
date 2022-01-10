@@ -5,7 +5,8 @@ this is a simple program that deals with fraction operations such as addition, s
 ## Run the program and to see the outputs. 
 go to the directory of the program 
 
-run : javac FractionTestDrive.java 
-run : java FractionTestDrive
+1. run : javac FractionTestDrive.java
+
+2. run : java FractionTestDrive
 
 

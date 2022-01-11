@@ -9,6 +9,9 @@ class FractionTestDrive{
 		System.out.println(f1.compare(new MyFraction(2,4)));
 		f1.reciprocal();
 		System.out.println(f1.toString());
+		answer = f1.minus(new MyFraction(1,3));
+		System.out.println(answer.toString());
+
 
 
 	}

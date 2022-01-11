@@ -52,6 +52,18 @@ class MyFraction implements Fraction{
 
 	}
 
+	public MyFraction minus(MyFraction f){
+		MyFraction result; 
+		if(f.denom == this.denom){
+			return new MyFraction(this.nom - f.nom, this.denom);
+		}
+
+		int n_denom = this.denom * f.denom;
+		int n_nom = this.nom * f.denom - f.nom * this.denom;
+		result = simplifyFactor(n_nom, n_denom);
+		return result;
+	}
+
 	public MyFraction multiply(MyFraction f){
 		if(f.denom == 0)
 			throw new IllegalArgumentException("denominator can not be zero");

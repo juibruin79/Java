@@ -5,7 +5,7 @@ public interface Fraction{
 	public MyFraction add(MyFraction f);
 	public MyFraction minus(MyFraction f);
 	public MyFraction multiply(MyFraction f);
-	// public divide(MyFraction f1, MyFraction f2);
+	public MyFraction divide(MyFraction f);
 	public void reciprocal();
 	public boolean compare(MyFraction f);
 }

@@ -74,6 +74,11 @@ class MyFraction implements Fraction{
 		return result;
 	}
 
+	public MyFraction divide(MyFraction f){
+		f.reciprocal();
+		return this.multiply(f);
+	}
+
 	public void reciprocal(){
 		if(this.nom == 0){
 			throw new IllegalArgumentException("Illegal reciprocal: nominator is Zero");

@@ -1,23 +1,26 @@
+import org.junit.*;
+import static org.junit.Assert.*;
+
 class FractionTestDrive{
+	MyFraction f1 = new MyFraction(1,3);
+	
+
 	public static void main(String[] args){
-		System.out.println("Hello FractionTestDrive");
-		MyFraction answer;
-		MyFraction f1 = new MyFraction(1,3);
-		answer = f1.add(new MyFraction(1,6));
-		System.out.println(answer.toString());
-		System.out.println(f1.compare(new MyFraction(2,6)));
-		System.out.println(f1.compare(new MyFraction(2,4)));
-		f1.reciprocal();
-		System.out.println("-------------");
-		System.out.println(f1.toString());
-		answer = f1.minus(new MyFraction(1,3));
-		System.out.println(answer.toString());
-		System.out.println("-------------");
-		answer = f1.multiply(new MyFraction(1,7));
-		answer = f1.divide(new MyFraction(2,1));
-		System.out.println(answer.toString());
+		
+		FractionTestDrive test = new FractionTestDrive();
+		test.test();
+	}
 
-
+	@Test
+	public void test(){
+		MyFraction result = f1.add(new MyFraction(2,3));
+		//System.out.println(result.toString());
+		//System.out.println("@Test: result should be 1/1");
+		assertEquals("1/1", result.toString());
+		result = f1.multiply(new MyFraction(3,4));
+		assertEquals("1/4", result.toString());
 
 	}
+
+
 }

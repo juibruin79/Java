@@ -15,7 +15,7 @@ class MyFraction implements Fraction{
 		if(denom < 0){
 			throw new IllegalArgumentException("denominator can not be negative");
 		}
-
+		//System.out.println("Creating a fraction");
 		this.nom = nom;
 		this.denom = denom;
 	}
@@ -41,11 +41,14 @@ class MyFraction implements Fraction{
 	public MyFraction add(MyFraction f){
 
 		if(f.denom == this.denom){
-			return new MyFraction(f.nom + this.nom, f.denom);
+
+			return simplifyFactor(f.nom + this.nom, f.denom);
 		}
 
 		int n_denom = f.denom * this.denom;
 		int n_nom = f.nom * this.denom + this.nom * f.denom;
+		//System.out.println("adding ");
+
 		MyFraction result = simplifyFactor(n_nom, n_denom);
 
 		return result;
@@ -103,6 +106,9 @@ class MyFraction implements Fraction{
 	//Return MyFraction Object with simplified Factor
 	private MyFraction simplifyFactor(int nom ,int denom){
 		int gcd = 1;
+		if(nom == denom)
+			return new MyFraction(1,1);
+
 		for(int i = 1; i <= nom && i <= denom; i++){
 			if(nom%i == 0 && denom % i == 0){
 				gcd = i;

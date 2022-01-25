@@ -1,4 +1,4 @@
-#Inheritance and Polymorphism 
+# Inheritance and Polymorphism 
 
 instanceof - check the equality of the class 
 super - method to be inherited from parent's class 

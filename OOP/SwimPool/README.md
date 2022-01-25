@@ -1,4 +1,4 @@
-#Interface&Abstract
+# Interface&Abstract
 Interface 
 ---
 allows multiple inheretance; attributes are allowed. keyword : implements

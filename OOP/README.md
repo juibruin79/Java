@@ -1,4 +1,4 @@
-#This is OOP practice section with java
+#OOP
 
 cotnents
 ---

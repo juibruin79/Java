@@ -10,7 +10,7 @@ class Selection{
 	}
 
 	public int[] selectionSort(int[] lst){
-
+		System.out.println("Init : "+Arrays.toString(lst));
 		for(int i = 0; i < lst.length; i++){
 			int min = lst[i];
 			int minDex = i;
@@ -23,6 +23,7 @@ class Selection{
 			int temp = lst[i];
 			lst[i] = min;
 			lst[minDex] = temp; 
+			System.out.println(Arrays.toString(lst));
 		}
 
 		return lst;

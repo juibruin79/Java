@@ -1,4 +1,5 @@
 import java.util.*;
+
 class Bubble{
 	public static void main(String[] args){
 		int[] lst = {6,5,3,4,2,1};

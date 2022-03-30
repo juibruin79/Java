@@ -7,16 +7,18 @@
 class Solution {
     public int solution(int N) {
         // write your code in Java SE 8
-        int tot = 1;
+        int tot = 0;
         int max = 0;
-        int init = 2; 
-        while(init < N){
-            if(N % init == 0)
+        int init = 1; 
+        while(init <= N){
+            if(N % init == 0){
                max = Math.max(tot, max);
+            }
             tot++;
-            init = init << 1;
+            init = init << 1;  
         }
 
         return max;
     }
 }
+
